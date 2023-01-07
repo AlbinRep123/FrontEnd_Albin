@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/ejercicios" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>ejercicioinfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="ejerci">
+
+  <br>
+  <ion-card>
+    <ion-item>
+      <h3>ID: {{ ejerci.id_ejercicios }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Ejercicios de Parte Superior: {{ ejerci.parte_superior }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Ejercicios de Parte Media: {{ ejerci.parte_media }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Ejercicios de Parte Inferior: {{ ejerci.parte_inferior }}</h3>
+    </ion-item>
+  </ion-card>
+
+  <div>
+    <ion-button [routerLink]="'/ejercicioedit/' + ejerci.id_ejercicios" color="warning">EDITAR</ion-button>
+  </div>
+  
+
+  
+</ion-content>

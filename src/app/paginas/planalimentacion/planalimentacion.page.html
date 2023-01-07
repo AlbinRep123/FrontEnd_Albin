@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/menu" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>Plan Alimentacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+
+  <ion-list>
+    <ion-item *ngFor="let planAlimentos of planalimentacion let i=index">
+      
+    <ion-label routerLink="/planalimentacioninfo/{{planAlimentos.id_plan_alimentacion}}">  
+      <p>ID: {{planAlimentos.id_plan_alimentacion}}</p>
+      <p>Tipos de Comidas por Semana: {{planAlimentos.tipos_de_comidas_semana}}</p>
+      <p>Cantidad de Comidas por Semana: {{planAlimentos.cantidad_de_comidas_semana}}</p>
+    </ion-label>
+
+      <ion-buttons side="start">
+        <ion-button color="danger" (click)="borrar(planAlimentos,i)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="agregarPlanAlimentacion()">
+      <ion-icon name="add-outline"></ion-icon> 
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

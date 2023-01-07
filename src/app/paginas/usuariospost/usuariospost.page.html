@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+      <ion-buttons>
+        <ion-back-button defaultHref="/usuarios" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>usuariospost</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-label type="text" #id_usuarios></ion-label>
+          <ion-input type="text" placeholder="Ingrese los nombres del usuario" #nombres></ion-input>
+          <ion-input type="text" placeholder="Ingrese el apellido paterno" #apellido_paterno></ion-input>
+          <ion-input type="text" placeholder="Ingrese el apellido materno" #apellido_materno></ion-input>
+          <ion-input type="text" placeholder="Ingrese la edad" #edad></ion-input>
+          <ion-input type="text" placeholder="Ingrese el tipo de sexo del usuario" #sexo></ion-input>
+          <ion-input type="text" placeholder="Ingrese el IMC del usuario" #imc></ion-input>
+          <ion-input type="text" placeholder="Ingrese el id del plan de entrenamiento" #id_entrenamiento></ion-input>
+
+          <ion-button color="primary" (click)="agregarNuevoUsuario(id_usuarios, nombres, apellido_paterno, apellido_materno, edad, sexo, imc, id_entrenamiento)">Guardar</ion-button>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-toolbar>
+
+  </ion-toolbar>
+
+</ion-content>

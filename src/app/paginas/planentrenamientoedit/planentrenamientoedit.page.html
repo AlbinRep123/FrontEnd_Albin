@@ -1,0 +1,58 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize" color="black">{{ planentredit.tipo_de_complexion }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating">Tipo de complexion</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe el tipo de complexion"
+                  [(ngModel)]="planentredit.tipo_de_complexion"
+                  name="tipo_de_complexion"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">horas de entrenamiento a la semana</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tu apellido paterno"
+                  [(ngModel)]="planentredit.horas_de_entrenamiento_semana"
+                  name="horas_de_entrenamiento_semana"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Id del ejercicio</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tu apellido materno"
+                  [(ngModel)]="planentredit.id_ejerci"
+                  name="id_ejerci"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Id alimentacion</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tu edad"
+                  [(ngModel)]="planentredit.id_alimen"
+                  name="id_alimen"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-button   type="submit"
+                  expand="block"
+                  shape="round"
+                  [disabled]="formulario.invalid"
+                  color="success">
+      Aceptar
+    </ion-button>
+  </form>
+</ion-content>

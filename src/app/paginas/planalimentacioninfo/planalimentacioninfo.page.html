@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/planalimentacion" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>Informacion del plan de alimentacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="planali">
+
+  <br>
+  <ion-card>
+    <ion-item>
+      <h3>ID: {{ planali.id_plan_alimentacion }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Tipos de Comidas por Semana: {{ planali.tipos_de_comidas_semana }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Cantidad de Comidas por Semana: {{ planali.cantidad_de_comidas_semana }}</h3>
+    </ion-item>
+  </ion-card>
+  
+  <div>
+    <ion-button [routerLink]="'/planalimentacionedit/' + planali.id_plan_alimentacion" color="warning">EDITAR</ion-button>
+  </div>
+  
+</ion-content>

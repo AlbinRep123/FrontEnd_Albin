@@ -1,0 +1,26 @@
+[
+
+    {
+        "icon": "receipt-outline",
+        "name": "USUARIOS",
+        "redirectTo": "/usuarios"
+    },
+
+    {
+        "icon": "receipt-outline",
+        "name": "EJERCICIOS",
+        "redirectTo": "/ejercicios"
+    },
+    {
+        "icon": "receipt-outline",
+        "name": "PLAN ENTRENAMIENTO",
+        "redirectTo": "/planentrenamiento"
+    },
+    {
+        "icon": "receipt-outline",
+        "name": "PLAN ALIMENTACION",
+        "redirectTo": "/planalimentacion"
+    }
+
+
+]

@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/planentrenamiento" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>Plan entrenamiento informacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="planentre"> 
+
+  <br>
+  <ion-card>
+    <ion-item>
+      <h3>ID: {{ planentre.id_plan_entrenamiento }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Tipo de Complexion: {{ planentre.tipo_de_complexion }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Horas de Entrenamiento a la Semana: {{ planentre.horas_de_entrenamiento_semana }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>ID de Ejercicios: {{ planentre.id_ejerci }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>ID de Plan de Alimentacion: {{ planentre.id_alimen }}</h3>
+    </ion-item>
+  </ion-card>
+
+  <div>
+    <ion-button [routerLink]="'/planentrenamientoedit/' + planentre.id_plan_entrenamiento" color="warning">EDITAR</ion-button>
+  </div>
+  
+
+  
+</ion-content>

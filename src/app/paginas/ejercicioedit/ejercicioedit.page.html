@@ -1,0 +1,49 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize" color="dark">{{ ejeredi.parte_superior }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating">Parte superior</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe los ejercicios de parte superior"
+                  [(ngModel)]="ejeredi.parte_superior"
+                  name="parte_superior"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Parte media</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe los ejercicios de parte media"
+                  [(ngModel)]="ejeredi.parte_media"
+                  name="parte_media"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Parte inferior</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe los ejercicios de parte inferior"
+                  [(ngModel)]="ejeredi.parte_inferior"
+                  name="parte_inferior"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-button   type="submit"
+                  expand="block"
+                  shape="round"
+                  [disabled]="formulario.invalid"
+                  color="success">
+      Aceptar
+    </ion-button>
+  </form>
+</ion-content>

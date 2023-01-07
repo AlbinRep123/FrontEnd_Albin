@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/menu" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let Usuario of usuarios let i=index">
+      
+      <ion-label routerLink="/usuariosinfo/{{Usuario.id_usuarios}}">
+      <p>ID: {{Usuario.id_usuarios}}</p>
+      <p>Nombre: {{Usuario.nombres}}</p>
+      <p>Apellido Paterno: {{Usuario.apellido_paterno}}</p>
+      <p>Apellido Materno: {{Usuario.apellido_materno}}</p>
+      <p>Edad: {{Usuario.edad}}</p>
+      <p>Sexo: {{Usuario.sexo}}</p>
+      <p>IMC: {{Usuario.imc}}</p>
+      <p>ID del Entrenamiento: {{Usuario.id_entrenamiento}}</p>
+    </ion-label>
+  
+      <ion-buttons side="start">
+        <ion-button color="danger" (click)="borrar(Usuario,i)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="agregarUsuario()">
+      <ion-icon name="person-add-outline"></ion-icon> 
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+ 

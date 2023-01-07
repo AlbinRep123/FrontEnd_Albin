@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/menu" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>Plan Entrenamiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let planEntrena of planentrenamiento let i=index">
+    <ion-label routerLink="/planentrenamientoinfo/{{planEntrena.id_plan_entrenamiento}}">
+      <p>ID: {{planEntrena.id_plan_entrenamiento}}</p>
+      <p>Tipo de Complexion: {{planEntrena.tipo_de_complexion}}</p>
+      <p>Horas de Entrenamiento a la Semana: {{planEntrena.horas_de_entrenamiento_semana}}</p>
+      <p>ID de Ejercicios: {{planEntrena.id_ejerci}}</p>
+      <p>ID de Plan de Alimentacion: {{planEntrena.id_alimen}}</p>
+    </ion-label>   
+
+      <ion-buttons side="start">
+        <ion-button color="danger" (click)="borrar(planEntrena,i)">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+    </ion-item>
+  </ion-list>
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="agregarPlanEntrenamiento()">
+      <ion-icon name="add-outline"></ion-icon> 
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content> 

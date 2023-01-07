@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>planentrenamientopost</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-label type="text" #id_plan_entrenamiento></ion-label>
+          <ion-input type="text" placeholder="Ingrese el tipo de complexion" #tipo_de_complexion></ion-input>
+          <ion-input type="text" placeholder="Ingrese las horas a la semana que entrenara" #horas_de_entrenamiento_semana></ion-input>
+          <ion-input type="text" placeholder="Ingrese el id de ejercicios" #id_ejerci></ion-input>
+          <ion-input type="text" placeholder="Ingrese el id de plan de alimentacion" #id_alimen></ion-input>
+          
+          <ion-button color="primary" (click)="agregarNuevoPlanEntrenamiento(id_plan_entrenamiento, tipo_de_complexion, horas_de_entrenamiento_semana, id_ejerci, id_alimen)">Guardar</ion-button>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-toolbar>
+
+  </ion-toolbar>
+
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/planalimentacion" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize" color="dark">{{ planaliedit.id_plan_alimentacion }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding"> 
+  <form #formulario="ngForm" (ngSubmit)="guardar()">
+    <ion-item>
+      <ion-label position="floating">Tipos de comidas de la semana</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe los tipos de comodias a la semana"
+                  [(ngModel)]="planaliedit.tipos_de_comidas_semana"
+                  name="tipos_de_comidas_semana"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad de comidas de la semana</ion-label>
+      <ion-input  type="text"
+                  placeholder="Escribe tu apellido paterno"
+                  [(ngModel)]="planaliedit.cantidad_de_comidas_semana"
+                  name="cantidad_de_comidas_semana"
+                  required>
+      </ion-input>
+    </ion-item>
+    <ion-button   type="submit"
+                  expand="block"
+                  shape="round"
+                  [disabled]="formulario.invalid"
+                  color="success">
+      Aceptar
+    </ion-button>
+  </form>
+</ion-content>

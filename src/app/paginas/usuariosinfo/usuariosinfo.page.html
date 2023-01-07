@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/usuarios" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>Usuario informacion </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="usua"> 
+ 
+  <br>
+  <ion-card>
+    <ion-item>
+      <h3>ID: {{ usua.id_usuarios }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Nombre: {{ usua.nombres }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Apellido Paterno: {{ usua.apellido_paterno }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Apellido Materno: {{ usua.apellido_materno }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Edad: {{ usua.edad }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>Sexo: {{ usua.sexo }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>IMC: {{ usua.imc }}</h3>
+    </ion-item>
+    <ion-item>
+      <h3>ID del Entrenamiento{{ usua.id_entrenamiento}}</h3>
+    </ion-item>
+
+  </ion-card>
+  
+  <div>
+    <ion-button [routerLink]="'/usuariosedit/' + usua.id_usuarios" color="warning">EDITAR</ion-button>
+  </div>
+
+  
+</ion-content>

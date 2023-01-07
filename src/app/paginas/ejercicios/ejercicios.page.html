@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/menu" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>ejercicios</ion-title>
+  </ion-toolbar>
+</ion-header> 
+
+<ion-content>
+<ion-list>
+  <ion-item *ngFor="let Ejercicio of ejercicios let i=index"> 
+    <ion-label routerLink="/ejercicioinfo/{{Ejercicio.id_ejercicios}}">
+    <p>ID: {{Ejercicio.id_ejercicios}}</p>
+    <p>Ejercicios de Parte Superior: {{Ejercicio.parte_superior}}</p>
+    <p>Ejercicios de Parte Media: {{Ejercicio.parte_media}}</p>
+    <p>Ejercicios de Parte Inferior: {{Ejercicio.parte_inferior}}</p> 
+  </ion-label>
+
+    <ion-buttons side="start">
+      <ion-button color="danger" (click)="borrar(Ejercicio,i)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+      </ion-buttons>
+  </ion-item>
+</ion-list>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button color="success" (click)="agregarEjercicio()">
+    <ion-icon name="add-outline"></ion-icon> 
+  </ion-fab-button>
+</ion-fab>
+</ion-content>    

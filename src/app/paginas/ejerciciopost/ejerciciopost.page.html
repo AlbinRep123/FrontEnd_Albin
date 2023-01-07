@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-buttons>
+        <ion-back-button defaultHref="/" text="Regresar" color="secondary" mode="ios"></ion-back-button>
+      </ion-buttons>
+    </ion-buttons>
+    <ion-title>ejerciciopost</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content> 
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-content>
+          <ion-label type="text" #id_ejercicios></ion-label>
+          <ion-input type="text" placeholder="Ingrese los ejercicios para la parte superior" #parte_superior></ion-input>
+          <ion-input type="text" placeholder="Ingrese los ejercicios para la parte media" #parte_media></ion-input>
+          <ion-input type="text" placeholder="Ingrese los ejercicios para la parte inferior" #parte_inferior></ion-input>
+          
+          <ion-button color="primary" (click)="agregarNuevoEjercicio(id_ejercicios, parte_superior, parte_media, parte_inferior)">Guardar</ion-button>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-toolbar>
+
+  </ion-toolbar>
+
+</ion-content>
